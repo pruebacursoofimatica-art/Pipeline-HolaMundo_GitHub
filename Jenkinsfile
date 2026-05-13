@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Ajusta esta ruta a la instalación real de JDK en tu servidor
-        JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'
+        JAVA_HOME = 'C:\Users\jesus.lopez\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.3.9-hotspot'
         PATH = "${JAVA_HOME}\\bin;${env.PATH}"
     }
     stages {
