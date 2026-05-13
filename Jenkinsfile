@@ -6,15 +6,16 @@ pipeline {
                 echo 'Obteniendo el código desde GitHub...'
             }
         }
-        stage('Compilación') {
+      stage('Compilación') {
             steps {
-                // Se asume que el servidor es Windows por las capturas anteriores
-                bat 'java Holamundo.java' 
+                echo 'Compilando el código Java...'
+                bat 'javac Holamundo.java'  // ✅ javac compila
             }
         }
         stage('Ejecución') {
             steps {
-                bat 'java Holamundo'
+                echo 'Ejecutando la aplicación...'
+                bat 'java Holamundo'  // ✅ java ejecuta (sin .java)
             }
         }
     }
