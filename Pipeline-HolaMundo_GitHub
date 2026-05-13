@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Descargando código de GitHub...'
+            }
+        }
+        stage('Compilar') {
+            steps {
+                bat 'javac Holamundo.java'
+            }
+        }
+        stage('Ejecutar') {
+            steps {
+                bat 'java Holamundo'
+            }
+        }
+    }
+}
