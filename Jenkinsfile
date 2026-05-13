@@ -9,7 +9,7 @@ pipeline {
         stage('Compilación') {
             steps {
                 // Se asume que el servidor es Windows por las capturas anteriores
-                bat 'javac Holamundo.java' 
+                bat 'java Holamundo.java' 
             }
         }
         stage('Ejecución') {
